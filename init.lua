@@ -1,7 +1,20 @@
--- Define a function to print "Big W!" in the status bar
-function M.printBigW()
-    vim.api.nvim_command('echo "🙌 Big W!"')
+-- nvim-bigw/init.lua
+
+local W = {} -- W for wunkus
+
+function W.setup()
+    -- Mmmmmm duckies 🐤
+    -- yes
+    vim.cmd("command! -nargs=0 W lua require('nvim-bigw').bigw()")
 end
 
--- Register ze function to :W command
-vim.api.nvim_command('command! W lua require("packer.start.nvim-bigw.init").printBigW()')
+-- We makin it out of the typo with this one
+function W.bigw()
+    -- Invoke happy accident ^〰^
+    print("🙌 big W!")
+end
+
+-- 
+vim.cmd [[autocmd User PackerComplete ++once lua require('nvim-bigw').setup()]]
+
+return W
