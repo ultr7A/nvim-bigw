@@ -4,4 +4,4 @@ function M.printBigW()
 end
 
 -- Register ze function to :W command
-vim.api.nvim_command('command! W lua require("nvim-bigw").printBigW()')
+vim.api.nvim_command('command! W lua require("packer.start.nvim-bigw.init").printBigW()')
