@@ -3,7 +3,7 @@
 local W = {} -- W for wunkus
 
 function W.setup()
-    -- Mmmmmm duckies 🐤
+    print("Mmmmmm duckies 🐤")
     -- yes
     vim.cmd("command! -nargs=0 W lua require('nvim-bigw').bigw()")
 end
